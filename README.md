@@ -78,10 +78,10 @@ Una vez que el servidor de desarrollo esté funcionando, puedes acceder a la apl
 
 ### Participantes
 
--   Milton
--   Willian David
--   Yury Brayan
--   Brad Tyler
+-   Milton Jarata Quispe
+-   Willian David Calsin Borda
+-   Yury Brayan Huaquilla Torres
+-   Brad Tyler Sanchez Mamani
 
 ### License
 
