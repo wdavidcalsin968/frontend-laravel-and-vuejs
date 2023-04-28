@@ -39,15 +39,15 @@ const logout = () => {
                 <div class="flex justify-between">
                     <div class="flex">
                         <a href="https://flowbite.com/" class="flex items-center">
-                        <img src="/logo_unap.png" class="h-8 mr-3" alt="Flowbite Logo" />
+                        <img src="/logo_unap.png" class="h-8 mr-5" alt="Flowbite Logo" />
                         <span
-                            class="self-center text-2xl font-semibold whitespace-nowrap dark:text-white text-slate-800">UNA
+                            class="hidden lg:block self-center text-xl font-semibold whitespace-nowrap dark:text-white text-slate-800">UNA
                             Puno</span>
                             <font-awesome-icon icon="fa-duotone fa-flag-usa" size="xs" style="--fa-primary-color: #2318c9; --fa-secondary-color: #eb0000;" />
                         </a>
                     </div>
                 </div>
-                <div class="hidden md:flex">
+                <div class="hidden md:flex md:pl-2">
                     <a href="#" class="flex items-center p-2 ml-5 rounded-md hover:bg-black/10 group">
                         <svg aria-hidden="true" class="h-4 w-4 text-blue-500 hover:text-white" fill="currentColor" viewBox="0 0 448 512">
                             <path d="M64 32C64 14.3 49.7 0 32 0S0 14.3 0 32V64 368 480c0 17.7 14.3 32 32 32s32-14.3 32-32V352l64.3-16.1c41.1-10.3 84.6-5.5 122.5 13.4c44.2 22.1 95.5 24.8 141.7 7.4l34.7-13c12.5-4.7 20.8-16.6 20.8-30V66.1c0-23-24.2-38-44.8-27.7l-9.6 4.8c-46.3 23.2-100.8 23.2-147.1 0c-35.1-17.6-75.4-22-113.5-12.5L64 48V32z"/>
@@ -305,7 +305,7 @@ const logout = () => {
                     </div>
                 </div>
 
-                <div class="mt-3 space-y-1 border">
+                <div class="mt-3 space-y-1">
                     <ResponsiveNavLink :href="route('profile.show')" :active="route().current('profile.show')">
                         Profile
                     </ResponsiveNavLink>
