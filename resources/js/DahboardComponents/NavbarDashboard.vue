@@ -278,7 +278,7 @@ const logout = () => {
         <div :class="{
                     block: showingNavigationDropdown,
                     hidden: !showingNavigationDropdown,
-                }" class="sm:hidden">
+                }" class="sm:hidden bg-white shadow-md px-2">
             <div class="pt-2 pb-3 space-y-1">
                 <ResponsiveNavLink :href="route('dashboard')" :active="route().current('dashboard')">
                     Dashboard
@@ -286,7 +286,7 @@ const logout = () => {
             </div>
 
             <div class="pt-4 pb-1 border-t border-gray-200 dark:border-gray-600">
-                <div class="flex items-center px-4">
+                <div class="flex items-center px-4 hover:bg-gray-100">
                     <div v-if="$page.props.jetstream
                                 .managesProfilePhotos
                             " class="shrink-0 mr-3">
@@ -305,7 +305,7 @@ const logout = () => {
                     </div>
                 </div>
 
-                <div class="mt-3 space-y-1">
+                <div class="mt-3 space-y-1 border">
                     <ResponsiveNavLink :href="route('profile.show')" :active="route().current('profile.show')">
                         Profile
                     </ResponsiveNavLink>
