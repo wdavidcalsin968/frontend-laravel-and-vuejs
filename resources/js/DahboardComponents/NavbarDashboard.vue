@@ -76,9 +76,9 @@ const listNav = [
 
 <template>
     <nav
-        class="w-full h-[4.55rem] transition-transform -translate-x-52 sm:translate-x-0 bg-white shadow-md dark:bg-gray-800 border-b border-solid border-black/10">
+        class="w-full h-[4.55rem] transition-transform -translate-x-auto sm:translate-x-0 bg-white shadow-md dark:bg-gray-800 border-b border-solid border-black/10">
         <div class="w-full px-8 h-full">
-            <div class="flex justify-between items-center content-center h-full  w-full">
+            <div class="flex justify-between content-center h-full w-full">
                 <div class="flex justify-between">
                     <!-- <div class="flex">
                         <a href="https://flowbite.com/" class="flex items-center">
@@ -89,18 +89,14 @@ const listNav = [
                             <font-awesome-icon icon="fa-duotone fa-flag-usa" size="xs" style="--fa-primary-color: #2318c9; --fa-secondary-color: #eb0000;" />
                         </a>
                     </div> -->
-                    <svg aria-hidden="true" class="h-6 w-6" :fill="currentColor" viewBox="0 0 448 512">! Font Awesome Pro 6.4.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license (Commercial License) Copyright 2023 Fonticons, Inc.<path d="M0 96C0 78.3 14.3 64 32 64H416c17.7 0 32 14.3 32 32s-14.3 32-32 32H32C14.3 128 0 113.7 0 96zM0 256c0-17.7 14.3-32 32-32H416c17.7 0 32 14.3 32 32s-14.3 32-32 32H32c-17.7 0-32-14.3-32-32zM448 416c0 17.7-14.3 32-32 32H32c-17.7 0-32-14.3-32-32s14.3-32 32-32H416c17.7 0 32 14.3 32 32z"/></svg>
                 </div>
                 <div class="hidden md:flex ">
                     <div class=" flex ">
                         <a v-for="(item, index) in listNav" :key="index" :href="item.link" class="flex items-center p-2 ml-5 rounded-md hover:bg-black/10 group">
                             <svg aria-hidden="true" class="h-4 w-4 text-blue-500 hover:text-white" :fill="item.iconColor" viewBox="0 0 448 512">
                                 <path :d="item.iconPath"/>
-                            </svg>
-                           
-                        </a>
-
-                        
+                            </svg>                           
+                        </a>                        
                     </div>
                 </div>
 
