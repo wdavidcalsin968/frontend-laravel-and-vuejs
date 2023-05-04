@@ -1,12 +1,8 @@
-<script setup>
-import Welcome from "@/Components/Welcome.vue";
-</script>
+
 
 <template>
-    <div class="py-12">
-
-
-        <div class="max-w-7xl mx-auto sm:px-6 lg:px-20">
+    <div class="">
+        <div class="">
 
             <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-1 gap-6 w-full min-w-0 ng-star-inserted py-4 m-0">
                 <div class="flex flex-col flex-auto p-6 bg-card shadow rounded-2xl overflow-hidden bg-white">
@@ -225,11 +221,20 @@ import Welcome from "@/Components/Welcome.vue";
                                         <span class="sr-only">Next</span>
                                     </span>
                                 </button>
+                                <div>
+                                    <h2>Test State</h2>
+                                    <div>
+                                        <h2>Contador: {{ contador }}</h2>
+                                        <button @click="incrementar">Incrementar</button>
+                                        <button @click="decrementar">Decrementar</button>
+                                    </div>
+                                </div>
                             </div>
                         </div>
                     </div>
                 </div>
             </div>
+            
         </div>
     </div>
 

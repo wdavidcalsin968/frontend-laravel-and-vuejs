@@ -29,15 +29,58 @@ const switchToTeam = (team) => {
 const logout = () => {
     router.post(route("logout"));
 };
+
+
+const listNav = [
+        {
+          label: 'Item 1',
+          link: '#',
+          iconPath: 'M64 32C64 14.3 49.7 0 32 0S0 14.3 0 32V64 368 480c0 17.7 14.3 32 32 32s32-14.3 32-32V352l64.3-16.1c41.1-10.3 84.6-5.5 122.5 13.4c44.2 22.1 95.5 24.8 141.7 7.4l34.7-13c12.5-4.7 20.8-16.6 20.8-30V66.1c0-23-24.2-38-44.8-27.7l-9.6 4.8c-46.3 23.2-100.8 23.2-147.1 0c-35.1-17.6-75.4-22-113.5-12.5L64 48V32z',
+          iconColor: 'currentColor'
+        },
+        {
+          label: 'Item 2',
+          link: '#',
+          iconPath: 'M32 32C14.3 32 0 46.3 0 64v96c0 17.7 14.3 32 32 32s32-14.3 32-32V96h64c17.7 0 32-14.3 32-32s-14.3-32-32-32H32zM64 352c0-17.7-14.3-32-32-32s-32 14.3-32 32v96c0 17.7 14.3 32 32 32h96c17.7 0 32-14.3 32-32s-14.3-32-32-32H64V352z',
+          iconColor: 'currentColor'
+        },
+        {
+          label: 'Item 3',
+          link: '#',
+          iconPath: 'M320 32c-17.7 0-32 14.3-32 32s14.3 32 32 32h64v64c0 17.7 14.3 32 32 32s32-14.3 32-32V64c0-17.7-14.3-32-32-32H320zM448 352c0-17.7-14.3-32-32-32s-32 14.3-32 32v64H320c-17.7 0-32 14.3-32 32s14.3 32 32 32h96c17.7 0 32-14.3 32-32V352z',
+          iconColor: 'currentColor'
+        },
+        {
+          label: 'Item 4',
+          link: '#',
+          iconPath: 'M416 208c0 45.9-14.9 88.3-40 122.7L502.6 457.4c12.5 12.5 12.5 32.8 0 45.3s-32.8 12.5-45.3 0L330.7 376c-34.4 25.2-76.8 40-122.7 40C93.1 416 0 322.9 0 208S93.1 0 208 0S416 93.1 416 208zM208 352a144 144 0 1 0 0-288 144 144 0 1 0 0 288z',
+          iconColor: 'currentColor'
+        },
+        {
+          label: 'Item 5',
+          link: '#',
+          iconPath: 'M0 48C0 21.5 21.5 0 48 0l0 48V441.4l130.1-92.9c8.3-6 19.6-6 27.9 0L336 441.4V48H48V0H336c26.5 0 48 21.5 48 48V488c0 9-5 17.2-13 21.3s-17.6 3.4-24.9-1.8L192 397.5 37.9 507.5c-7.3 5.2-16.9 5.9-24.9 1.8S0 497 0 488V48z',
+          iconColor: 'currentColor'
+        },
+        {
+          label: 'Item 6',
+          link: '#',
+          iconPath: 'M64 0C28.7 0 0 28.7 0 64V352c0 35.3 28.7 64 64 64h96v80c0 6.1 3.4 11.6 8.8 14.3s11.9 2.1 16.8-1.5L309.3 416H448c35.3 0 64-28.7 64-64V64c0-35.3-28.7-64-64-64H64z',
+          iconColor: 'currentColor'
+        }
+      ]
+  
+
+   
 </script>
 
 <template>
     <nav
         class="w-full h-[4.55rem] transition-transform -translate-x-52 sm:translate-x-0 bg-white shadow-md dark:bg-gray-800 border-b border-solid border-black/10">
-        <div class="w-full mx-auto px-4 sm:px-6 lg:px-8">
-            <div class="flex justify-between h-16">
+        <div class="w-full px-8 h-full">
+            <div class="flex justify-between items-center content-center h-full  w-full">
                 <div class="flex justify-between">
-                    <div class="flex">
+                    <!-- <div class="flex">
                         <a href="https://flowbite.com/" class="flex items-center">
                         <img src="/logo_unap.png" class="h-8 mr-5" alt="Flowbite Logo" />
                         <span
@@ -45,40 +88,22 @@ const logout = () => {
                             Puno</span>
                             <font-awesome-icon icon="fa-duotone fa-flag-usa" size="xs" style="--fa-primary-color: #2318c9; --fa-secondary-color: #eb0000;" />
                         </a>
+                    </div> -->
+                    <svg aria-hidden="true" class="h-6 w-6" :fill="currentColor" viewBox="0 0 448 512">! Font Awesome Pro 6.4.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license (Commercial License) Copyright 2023 Fonticons, Inc.<path d="M0 96C0 78.3 14.3 64 32 64H416c17.7 0 32 14.3 32 32s-14.3 32-32 32H32C14.3 128 0 113.7 0 96zM0 256c0-17.7 14.3-32 32-32H416c17.7 0 32 14.3 32 32s-14.3 32-32 32H32c-17.7 0-32-14.3-32-32zM448 416c0 17.7-14.3 32-32 32H32c-17.7 0-32-14.3-32-32s14.3-32 32-32H416c17.7 0 32 14.3 32 32z"/></svg>
+                </div>
+                <div class="hidden md:flex ">
+                    <div class=" flex ">
+                        <a v-for="(item, index) in listNav" :key="index" :href="item.link" class="flex items-center p-2 ml-5 rounded-md hover:bg-black/10 group">
+                            <svg aria-hidden="true" class="h-4 w-4 text-blue-500 hover:text-white" :fill="item.iconColor" viewBox="0 0 448 512">
+                                <path :d="item.iconPath"/>
+                            </svg>
+                           
+                        </a>
+
+                        
                     </div>
                 </div>
-                <div class="hidden md:flex md:pl-2">
-                    <a href="#" class="flex items-center p-2 ml-5 rounded-md hover:bg-black/10 group">
-                        <svg aria-hidden="true" class="h-4 w-4 text-blue-500 hover:text-white" fill="currentColor" viewBox="0 0 448 512">
-                            <path d="M64 32C64 14.3 49.7 0 32 0S0 14.3 0 32V64 368 480c0 17.7 14.3 32 32 32s32-14.3 32-32V352l64.3-16.1c41.1-10.3 84.6-5.5 122.5 13.4c44.2 22.1 95.5 24.8 141.7 7.4l34.7-13c12.5-4.7 20.8-16.6 20.8-30V66.1c0-23-24.2-38-44.8-27.7l-9.6 4.8c-46.3 23.2-100.8 23.2-147.1 0c-35.1-17.6-75.4-22-113.5-12.5L64 48V32z"/>
-                        </svg>
-                    </a>
-                    <a href="#" class="flex items-center p-2 ml-5 rounded-md hover:bg-black/10 group">
-                        <svg aria-hidden="true" class="h-4 w-4 text-blue-500 hover:text-white" fill="currentColor" viewBox="0 0 448 512">
-                            <path d="M32 32C14.3 32 0 46.3 0 64v96c0 17.7 14.3 32 32 32s32-14.3 32-32V96h64c17.7 0 32-14.3 32-32s-14.3-32-32-32H32zM64 352c0-17.7-14.3-32-32-32s-32 14.3-32 32v96c0 17.7 14.3 32 32 32h96c17.7 0 32-14.3 32-32s-14.3-32-32-32H64V352zM320 32c-17.7 0-32 14.3-32 32s14.3 32 32 32h64v64c0 17.7 14.3 32 32 32s32-14.3 32-32V64c0-17.7-14.3-32-32-32H320zM448 352c0-17.7-14.3-32-32-32s-32 14.3-32 32v64H320c-17.7 0-32 14.3-32 32s14.3 32 32 32h96c17.7 0 32-14.3 32-32V352z"/>
-                        </svg>
-                    </a>
-                    <a href="#" class="flex items-center p-2 ml-5 rounded-md hover:bg-black/10 group">
-                        <svg aria-hidden="true" class="h-4 w-4 text-blue-500 hover:text-white" fill="currentColor" viewBox="0 0 512 512">
-                            <path d="M416 208c0 45.9-14.9 88.3-40 122.7L502.6 457.4c12.5 12.5 12.5 32.8 0 45.3s-32.8 12.5-45.3 0L330.7 376c-34.4 25.2-76.8 40-122.7 40C93.1 416 0 322.9 0 208S93.1 0 208 0S416 93.1 416 208zM208 352a144 144 0 1 0 0-288 144 144 0 1 0 0 288z"/>
-                        </svg>
-                    </a>
-                    <a href="#" class="flex items-center p-2 ml-5 rounded-md hover:bg-black/10 group">
-                        <svg aria-hidden="true" class="h-4 w-4 text-blue-500 hover:text-white" fill="currentColor" viewBox="0 0 384 512">
-                            <path d="M0 48C0 21.5 21.5 0 48 0l0 48V441.4l130.1-92.9c8.3-6 19.6-6 27.9 0L336 441.4V48H48V0H336c26.5 0 48 21.5 48 48V488c0 9-5 17.2-13 21.3s-17.6 3.4-24.9-1.8L192 397.5 37.9 507.5c-7.3 5.2-16.9 5.9-24.9 1.8S0 497 0 488V48z"/>
-                        </svg>
-                    </a>
-                    <a href="#" class="flex items-center p-2 ml-5 rounded-md hover:bg-black/10 group">
-                        <svg aria-hidden="true" class="h-4 w-4 text-blue-500 hover:text-white" fill="currentColor" viewBox="0 0 512 512">
-                            <path d="M121 32C91.6 32 66 52 58.9 80.5L1.9 308.4C.6 313.5 0 318.7 0 323.9V416c0 35.3 28.7 64 64 64H448c35.3 0 64-28.7 64-64V323.9c0-5.2-.6-10.4-1.9-15.5l-57-227.9C446 52 420.4 32 391 32H121zm0 64H391l48 192H387.8c-12.1 0-23.2 6.8-28.6 17.7l-14.3 28.6c-5.4 10.8-16.5 17.7-28.6 17.7H195.8c-12.1 0-23.2-6.8-28.6-17.7l-14.3-28.6c-5.4-10.8-16.5-17.7-28.6-17.7H73L121 96z"/>
-                        </svg>
-                    </a>
-                    <a href="#" class="flex items-center p-2 ml-5 rounded-md hover:bg-black/10 group">
-                        <svg aria-hidden="true" class="h-4 w-4 text-blue-500 hover:text-white" fill="currentColor" viewBox="0 0 512 512">
-                            <path d="M64 0C28.7 0 0 28.7 0 64V352c0 35.3 28.7 64 64 64h96v80c0 6.1 3.4 11.6 8.8 14.3s11.9 2.1 16.8-1.5L309.3 416H448c35.3 0 64-28.7 64-64V64c0-35.3-28.7-64-64-64H64z"/>
-                        </svg>
-                    </a>
-                </div>
+
 
                     <!-- <div
                                     class="hidden space-x-8 sm:-my-px sm:ml-10 sm:flex"
@@ -138,9 +163,9 @@ const logout = () => {
                                                     .jetstream
                                                     .canCreateTeams
                                                 " :href="route(
-                    'teams.create'
-                )
-                ">
+                                                'teams.create'
+                                            )
+                                            ">
                                             Create New Team
                                         </DropdownLink>
 

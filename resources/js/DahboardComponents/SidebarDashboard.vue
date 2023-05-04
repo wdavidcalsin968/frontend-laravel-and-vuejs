@@ -14,10 +14,10 @@ defineProps({
 </script>
 
 <template>
-    <aside
-        id="default-sidebar"
-        class="w-[21.5rem] h-screen transition-transform -translate-x-full sm:translate-x-0 border-r border-solid border-black/10"
-        aria-label="Sidebar"
+    <div
+        
+        class="w-full h-screen bg-orange-500"
+       
     >
         <div
             class="h-full py-4 overflow-y-auto bg-[#0F172A] px-3 flex flex-col gap-10"
@@ -320,5 +320,5 @@ defineProps({
                 </ul>
             </div>
         </div>
-    </aside>
+    </div>
 </template>

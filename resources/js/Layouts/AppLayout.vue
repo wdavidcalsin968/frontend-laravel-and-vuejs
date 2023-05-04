@@ -41,11 +41,15 @@ const logout = () => {
 
         <div class="min-h-screen bg-gray-100 dark:bg-gray-900">
             <div class="fixed top-0 left-0 z-40 flex w-screen">
-                <SidebarDashboard />
-                <NavbarDashboard />
+                <div class="w-[17.5rem]">
+                    <SidebarDashboard />
+                </div>
+                <div class="flex-1">
+                    <NavbarDashboard />
+                </div>
             </div>
 
-            <main class="ml-48 mt-[2.8rem]">
+            <main class="pl-[17.9rem] px-2 pt-[4.3rem] ">
                 <slot />
             </main>
         </div>
