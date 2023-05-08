@@ -1,8 +1,7 @@
 
-
 <template>
-    <div class="">
-        <div class="">
+    <div >
+        <div class=" px-2 ml-72">
 
             <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-1 gap-6 w-full min-w-0 ng-star-inserted py-4 m-0">
                 <div class="flex flex-col flex-auto p-6 bg-card shadow rounded-2xl overflow-hidden bg-white">
@@ -15,6 +14,17 @@
                                 icon-Tienes 2 mensajes y 15 tareas
                             </p>
                         </div>
+                        <!-- <p>{{ count }}</p>
+                        <v-btn rounded="xl" size="x-large" @click='increment'>Increment</v-btn>
+
+                        <div class="">
+                            <p>{{isMobile}}</p>
+                            <v-btn rounded="xl" size="x-large" @click='setIsMobile'>
+                                 Responsive   
+                            </v-btn>
+
+                        </div> -->
+                       
 
                         <div class="px-12 m-0 py-6">
                             <button type="button" class="text-white bg-gradient-to-r from-sky-950 via-sky-800 to-sky-700 hover:bg-gradient-to-br focus:ring-4 focus:outline-none focus:ring-blue-300 dark:focus:ring-blue-800 shadow-lg shadow-blue-500/50 dark:shadow-lg dark:shadow-blue-800/80 font-medium rounded-lg text-sm px-5 py-2.5 text-center mr-2 mb-2 ">Blue</button>
@@ -223,11 +233,7 @@
                                 </button>
                                 <div>
                                     <h2>Test State</h2>
-                                    <div>
-                                        <h2>Contador: {{ contador }}</h2>
-                                        <button @click="incrementar">Incrementar</button>
-                                        <button @click="decrementar">Decrementar</button>
-                                    </div>
+                                   
                                 </div>
                             </div>
                         </div>
@@ -239,3 +245,16 @@
     </div>
 
 </template>
+
+<script>
+// import { mapState, mapActions, mapGetters } from 'vuex';
+
+// export default {
+//     computed: {
+//         ...mapState('counterMod',  ['count'])
+//     },
+//     methods: {
+//         ...mapActions(['increment'])
+//     },
+// } 
+</script>

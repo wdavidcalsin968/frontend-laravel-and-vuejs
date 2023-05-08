@@ -1,4 +1,5 @@
 <script setup>
+
 import { ref } from "vue";
 import { Head, Link, router } from "@inertiajs/vue3";
 import ApplicationMark from "@/Components/ApplicationMark.vue";
@@ -98,20 +99,7 @@ const listNav = [
                             </svg>                           
                         </a>                        
                     </div>
-                </div>
-
-
-                    <!-- <div
-                                    class="hidden space-x-8 sm:-my-px sm:ml-10 sm:flex"
-                                >
-                                    <NavLink
-                                        :href="route('dashboard')"
-                                        :active="route().current('dashboard')"
-                                    >
-                                        Dashboard
-                                    </NavLink>
-                                </div> -->
-                
+                </div>               
 
                 <div class="hidden sm:flex sm:items-center sm:ml-6">
                     <div class="ml-3 relative">

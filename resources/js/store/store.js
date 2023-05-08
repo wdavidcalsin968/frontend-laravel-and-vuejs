@@ -1,7 +1,12 @@
-import { create } from 'zustand'
+// Solucionado el problema importando la store 
 
-export const useBearStore = create((set) => ({
-  bears: 0,
-  increasePopulation: () => set((state) => ({ bears: state.bears + 1 })),
-  removeAllBears: () => set({ bears: 0 }),
-}))
+import { createStore } from 'vuex'
+import { counterModule } from './counter-store'
+
+
+export const store = () => createStore({
+  modules: {
+     counterMod: counterModule
+  }
+})
+

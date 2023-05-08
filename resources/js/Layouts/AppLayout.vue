@@ -40,16 +40,16 @@ const logout = () => {
         <Banner />
 
         <div class="min-h-screen bg-gray-100 dark:bg-gray-900">
-            <div class="fixed top-0 left-0 z-40 flex w-screen">
-                <div class="w-[17.5rem]">
-                    <SidebarDashboard />
-                </div>
-                <div class="flex-1">
-                    <NavbarDashboard />
-                </div>
+            <div class="fixed w-[17.5rem] top-0 left-0">
+                <SidebarDashboard />
             </div>
+            <div class="fixed pl-[17.5rem] top-0 right-0 w-full">
+                <NavbarDashboard />
+            </div>
+            <!-- <div class="fixed top-0 left-0 z-40 flex w-screen">
+            </div> -->
 
-            <main class="pl-[17.9rem] px-2 pt-[4.3rem] ">
+            <main class="pt-[4.3rem]">
                 <slot />
             </main>
         </div>
